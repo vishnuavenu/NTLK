@@ -90,9 +90,13 @@ def main():
         error_list = [extract_pattern_text(e, r"\w*")for e in error if len(e) > 0]
         correct_list = [extract_pattern_text(c, r"\w*") for c in correct if len(c) > 0]
 
+        print("#"*30, "\n", "#"*30)
         print("Error : ", [is_multiword(w) for w in error_list])
+        print("Error - TEXTS : ", [w for w in error_list])
+        print("-"*30)
         print("Correct : ", [is_multiword(w) for w in correct_list])
-
+        print("Correct - TEXTS  : ", [w for w in correct_list])
+        print("#"*30, "\n", "#"*30)
 
 
 
